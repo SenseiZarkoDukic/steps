@@ -7,10 +7,14 @@ export default function App() {
         <div>3</div>
       </div>
       <div className="message">We learn React</div>
-      <button className="buttons">
-        <span>Left</span>
-        <span>Right</span>
-      </button>
+      <div className="buttons">
+        <button>
+          <span>Left</span>
+        </button>
+        <button>
+          <span>Right</span>
+        </button>
+      </div>
     </div>
   );
 }
