@@ -29,17 +29,10 @@ export default function App() {
 
   return (
     <div>
-      <div className="buttons">
-        <button>
-          <span
-            onClick={() => {
-              isOpen === true ? setIsOpen(false) : setIsOpen(true);
-            }}
-          >
-            X
-          </span>
-        </button>
-      </div>
+      <button className="close" onClick={() => setIsOpen(!isOpen)}>
+        &times;
+      </button>
+
       {isOpen && (
         <div className="steps">
           <div className="numbers">
