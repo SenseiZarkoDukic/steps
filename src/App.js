@@ -21,7 +21,6 @@ export default function App() {
     // step = step + 1;
     if (step < 3) {
       setStep((s) => s + 1);
-      setStep((s) => s + 1);
     }
 
     // BAD PRACTICE
@@ -48,21 +47,32 @@ export default function App() {
             {/* {test.name} */}
           </p>
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "white" }}
+            <Button
+              textColor={"white"}
+              bgColor={"#7950f2"}
               onClick={handlePrevious}
-            >
-              Previous
-            </button>
-            <button
-              style={{ backgroundColor: "#7950f2", color: "white" }}
+              text="Previous"
+            />
+            <Button
+              textColor={"white"}
+              bgColor={"#7950f2"}
               onClick={handleNext}
-            >
-              Next
-            </button>
+              text="Next"
+            />
           </div>
         </div>
       )}
     </>
+  );
+}
+
+function Button({ textColor, bgColor, onClick, text }) {
+  return (
+    <button
+      style={{ backgroundColor: bgColor, color: textColor }}
+      onClick={onClick}
+    >
+      {text}
+    </button>
   );
 }
